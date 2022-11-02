@@ -9,3 +9,16 @@ datasource db {
   provider = "mongodb"
   url      = env("DATABASE_URL")
 }
+
+model Device {
+  id          String    @id @default(auto()) @map("_id") @db.ObjectId
+  serialId    String    @unique
+  settings    Settings?
+}
+
+model Settings {
+  id          String    @id @default(auto()) @map("_id") @db.ObjectId
+  device      Device    @relation(fields: [deviceId], references: [id])
+  deviceId    String    @unique @db.ObjectId
+  city        String
+}
