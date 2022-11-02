@@ -15,7 +15,8 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@desk-clock/api-interfaces": ["libs/api-interfaces/src/index.ts"]
+      "@desk-clock/api-interfaces": ["libs/api-interfaces/src/index.ts"],
+      "@desk-clock/devices": ["libs/devices/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
