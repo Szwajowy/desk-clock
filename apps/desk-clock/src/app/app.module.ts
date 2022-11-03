@@ -4,7 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { NxWelcomeComponent } from './nx-welcome.component';
 import { HttpClientModule } from '@angular/common/http';
-import { UiModule } from 'libs/ui/src';
+import { UiModule } from '@desk-clock/ui';
 
 @NgModule({
   declarations: [AppComponent, NxWelcomeComponent],
