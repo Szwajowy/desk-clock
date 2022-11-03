@@ -1,12 +1,15 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { Settings } from '@prisma/client';
+import { Observable } from 'rxjs';
+import { SettingsService } from '../settings.service';
 
 @Component({
   selector: 'desk-clock-settings',
   templateUrl: './settings.component.html',
   styleUrls: ['./settings.component.scss'],
 })
-export class SettingsComponent implements OnInit {
-  constructor() {}
+export class SettingsComponent {
+  public $settings: Observable<Settings[]> = this.settingsService.getSettings();
 
-  ngOnInit(): void {}
+  constructor(public settingsService: SettingsService) {}
 }

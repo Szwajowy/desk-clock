@@ -11,7 +11,7 @@ export class SettingsService {
 
   constructor(private readonly http: HttpClient) {}
 
-  public getProducts(): Observable<Settings[]> {
+  public getSettings(): Observable<Settings[]> {
     {
       return this.http.get<Settings[]>(`${this.API_URL}/settings`);
     }

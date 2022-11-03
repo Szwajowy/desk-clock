@@ -1,1 +1,4 @@
-<p>settings works!</p>
+<div *ngFor="let settings of $settings | async">
+  <p>{{ settings.deviceId }}</p>
+  <p>{{ settings.city }}</p>
+</div>
